@@ -1,0 +1,148 @@
+.header {
+  position: relative;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.header__logo {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.header__logo img {
+  height: 48px;
+  width: auto;
+}
+
+.header__menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.header__menu-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.header__menu-icon {
+  display: block;
+  width: 1.125rem;
+  height: 2px;
+  background: var(--color-dark);
+  box-shadow:
+    0 -6px 0 var(--color-dark),
+    0 6px 0 var(--color-dark);
+}
+
+.header__nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1rem;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__nav--open {
+  display: flex;
+}
+
+.header__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__link {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--color-text);
+}
+
+.header__link:hover,
+.header__link:focus-visible {
+  color: var(--color-primary);
+}
+
+.header__link:focus-visible,
+.header__cta:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 0.625rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+.header__cta:hover,
+.header__cta:focus-visible {
+  background: var(--color-primary-dark);
+}
+
+@media (min-width: 900px) {
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__nav,
+  .header__nav--open {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    position: static;
+    padding: 0;
+    border: none;
+  }
+
+  .header__list {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .header__link {
+    padding: 0;
+  }
+
+  .header__cta {
+    align-self: auto;
+    flex-shrink: 0;
+  }
+
+  .header__logo img {
+    height: 56px;
+  }
+}
