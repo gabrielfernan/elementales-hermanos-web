@@ -1,4 +1,4 @@
-import './Footer.css'
+import './footer.css'
 import { AtSign, Mail, MapPin, MessageCircle } from 'lucide-react'
 
 const currentYear = new Date().getFullYear()

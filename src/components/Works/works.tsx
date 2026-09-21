@@ -1,4 +1,4 @@
-import './Works.css'
+import './works.css'
 
 const works = [
   {
