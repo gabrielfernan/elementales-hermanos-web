@@ -1,0 +1,134 @@
+.works {
+    padding: 96px 24px;
+    background: #f7f7f3;
+  }
+  
+  .works__container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  .works__header {
+    max-width: 720px;
+    margin-bottom: 48px;
+  }
+  
+  .works__eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  
+  .works__header h2 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+  
+  .works__header p {
+    max-width: 650px;
+    margin: 20px 0 0;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  
+  .works__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .works__item {
+    position: relative;
+    min-height: 340px;
+    overflow: hidden;
+    background: #ddd;
+  }
+  
+  .works__item--large {
+    min-height: 440px;
+  }
+  
+  .works__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .works__item:hover .works__image {
+    transform: scale(1.03);
+  }
+  
+  .works__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+    color: #fff;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.18) 55%,
+      transparent 80%
+    );
+  }
+  
+  .works__overlay span {
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  .works__overlay h3 {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    line-height: 1.15;
+  }
+  
+  @media (max-width: 768px) {
+    .works {
+      padding: 72px 20px;
+    }
+  
+    .works__header {
+      margin-bottom: 36px;
+    }
+  
+    .works__grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .works__item,
+    .works__item--large {
+      min-height: 360px;
+    }
+  
+    .works__overlay {
+      padding: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .works {
+      padding: 64px 20px;
+    }
+  
+    .works__item,
+    .works__item--large {
+      min-height: 300px;
+    }
+  }
